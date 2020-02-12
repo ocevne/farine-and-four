@@ -1,33 +1,121 @@
 /*=================================
-TYPOGRAPHY
+COLOR
 ===================================*/
 html {
-    color: #3d3d3d;
+    --color-pink: #dd9d9d;
+    --color-pink-light: #ffcece;
+    --color-brown: #4b110e;
+    --color-brown-light: #7b3b34;
+    --color-grey-dark: #3d3d3d;
+    --color-grey-medium: #545454;
+    --color-grey-light: #9e9e9a;
+}
+
+/*=================================
+TYPOGRAPHY
+===================================*/
+main {
+    max-width: 38rem;
+    margin-left: 1rem;
+
+}
+html {
+    --font-primary: 'EB Garamond', 'Time New Roman', sans-serif;
+    --font-secondary: 'Share', cursive, arial;
+}
+
+html {
+    color: var(--color-grey-dark);
+    font-family: var(--font-primary);
+    font-size: 1.05rem;
+}
+
+.logo, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
 }
 a {
-    color: #4b110e;
+    color: var(--color-brown);
 
 }
 ul {
     list-style-type: none;
 }
+
+figure {
+    display: inline;
+}
+
 .logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
+}
+.primary-font {
+    font-family: var(--font-primary);
+}
+.secondary-font {
+    font-family: var(--font-secondary);
+}
+
+a {
     text-decoration: none;
 }
+
+a:visited {
+    color: var(--color-brown-light)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    border: 1px solid var(--color-brown);
+}
+
+a:active {
+    color: var(--color-grey-medium);
+}
+
+.link-visited {
+    color: var(--color-brown-light);
+}
+
+.link-hover {
+    color: var(--color-brown);
+    text-decoration: underline;
+
+}
+.link-focus {
+    color: var(--color-brown);
+    border: 1px solid var(--color-brown);
+    display: inline-block;
+}
+.link-active {
+    color: var(--color-grey-medium);
+}
+
 /*=================================
 HEADER COMPONENTS
 ===================================*/
 
 header {
-    background-color: #dd9d9d;
+    background-color: var(--color-pink);
     padding: 2rem;
+
+}
+header li {
+    font-size: 1.1rem;
+}
+
+header a {
+    text-decoration: none;
 }
 
 /*=================================
 FOOTER
 ===================================*/
 footer {
-    background-color: #ffcece;
+    background-color: var(--color-pink-light);
     padding: 2rem;
 }
+
+
