@@ -22,26 +22,42 @@
     <main>
 
         <h1>Components</h1>
+
         <h2>Link Buttons</h2>
+
         <h3>Primary Buttons</h3>
-        <figure><a href="" class="link-button-primary">Button</a> <figcaption>Normal State</figcaption> </figure>
-        <figure><a href="" class="link-button-primary hover">Button</a><figcaption>Hover</figcaption></figure>
-        <figure><a href="" class="link-button-primary focus">Button</a><figcaption>Focus</figcaption></figure>
-        <figure><a href="" class="link-button-primary active">Button</a><figcaption>Active</figcaption></figure>
+
+            <div class="grid-display">
+                <figure><a href="" class="link-button-primary">Button</a> <figcaption>Normal State</figcaption> </figure>
+                <figure><a href="" class="link-button-primary hover">Button</a><figcaption>Hover</figcaption></figure>
+                <figure><a href="" class="link-button-primary focus">Button</a><figcaption>Focus</figcaption></figure>
+                <figure><a href="" class="link-button-primary active">Button</a><figcaption>Active</figcaption></figure>
+            </div>
+
         <h3>Secondary Buttons</h3>
-        <figure><a href="" class="link-button-secondary">Button</a> <figcaption>Normal State</figcaption> </figure>
-        <figure><a href="" class="link-button-secondary hover-secondary">Button</a><figcaption>Hover</figcaption></figure>
-        <figure><a href="" class="link-button-secondary focus-secondary">Button</a><figcaption>Focus</figcaption></figure>
-        <figure><a href="" class="link-button-secondary active-secondary">Button</a><figcaption>Active</figcaption></figure>
+
+            <div class="grid-display">
+
+                <figure><a href="" class="link-button-secondary">Button</a> <figcaption>Normal State</figcaption> </figure>
+                <figure><a href="" class="link-button-secondary hover-secondary">Button</a><figcaption>Hover</figcaption></figure>
+                <figure><a href="" class="link-button-secondary focus-secondary">Button</a><figcaption>Focus</figcaption></figure>
+                <figure><a href="" class="link-button-secondary active-secondary">Button</a><figcaption>Active</figcaption></figure>
+            </div>
+
         <h3>Tertiary Buttons</h3>
-        <figure><a href="" class="link-button-tertiary">Button</a> <figcaption>Normal State</figcaption> </figure>
-        <figure><a href="" class="link-button-tertiary hover-tertiary">Button</a><figcaption>Hover</figcaption></figure>
-        <figure><a href="" class="link-button-tertiary focus-tertiary">Button</a><figcaption>Focus</figcaption></figure>
-        <figure><a href="" class="link-button-tertiary active-tertiary">Button</a><figcaption>Active</figcaption></figure>
+
+            <div class="grid-display">
+
+                <figure><a href="" class="link-button-tertiary">Button</a> <figcaption>Normal State</figcaption> </figure>
+                <figure><a href="" class="link-button-tertiary hover-tertiary">Button</a><figcaption>Hover</figcaption></figure>
+                <figure><a href="" class="link-button-tertiary focus-tertiary">Button</a><figcaption>Focus</figcaption></figure>
+                <figure><a href="" class="link-button-tertiary active-tertiary">Button</a><figcaption>Active</figcaption></figure>
+            </div>
+
         <h2>Accordions</h2>
 
         <details>
-            <summary><span>Here will be the accordion header</span></summary>
+            <summary><span>Here will be the accordion heading</span></summary>
 
             <div class="summary-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -50,18 +66,32 @@
         </details>
 
         <details>
-            <summary><span>Here will be the accordion header</span></summary>
+            <summary><span>Here will be the accordion heading</span></summary>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </details>
 
         <details>
-            <summary><span>Here will be the accordion header</span></summary>
+            <summary><span>Here will be the accordion heading</span></summary>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </details>
+
+        <h2>Modal Dialog</h2>
+        <figure>
+
+        <button id="open-modal" type="button">Open Modal</button>
+        <dialog id="dialog-demo">
+
+            <h1 class="heading-modal">Hello, this is our modal!</h1>
+
+            <p>A cupcake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup.</p>
+
+        </dialog>
+
+        </figure>
 
     </main>
     <footer>
@@ -77,5 +107,24 @@
         </nav>
         <p>&copy; Copyright 2020</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+
+            const modal = document.querySelector('dialog');
+            const open = document.getElementById('open-modal');
+
+            open.addEventListener('click', () => {
+                modal.showModal();
+            });
+
+            modal.addEventListener('click', event => {
+                if (event.target === modal) {
+                    modal.close('cancelled');
+                }
+            });
+
+        });
+    </script
+
 </body>
 </html>

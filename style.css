@@ -24,35 +24,24 @@ body {
     list-style-type: none;
 }
 
-html {
-    --margin-standard: auto;
-    --margin-special: 5rem 1rem 2.5rem;
-    --margin-indented-1: 2.5rem 2rem;
-    --margin-indented-2: 2.75rem 3rem;
-    --margin-indented-3: 2.75rem 4rem;
-}
-
-h1 {
-    margin: var(--margin-special);
-}
-h2 {
-    margin: var(--margin-indented-1);
-    border-bottom: 1px solid var(--color-grey-light);
-}
-
-h3, h4, h5, h6 {
-    margin: var(--margin-indented-2);
-}
-
-h4, h5, h6 {
-    margin: var(--margin-indented-3);
-}
-
 main {
     max-width: 38rem;
     margin: auto;
-
 }
+ figure {
+     max-width: 38rem;
+ }
+
+.color-swatch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 /*=================================
 TYPOGRAPHY
@@ -95,6 +84,33 @@ h6 {
 }
 
 html {
+    --margin-standard: auto;
+    --margin-special: 5rem 1rem 2.5rem;
+    --margin-indented-1: 4rem 2rem;
+    --margin-indented-2: 3rem 3rem;
+    --margin-indented-3: 3rem 4rem;
+}
+
+h1 {
+    margin: var(--margin-special);
+}
+h2 {
+    margin: var(--margin-indented-1);
+    border-bottom: 1px solid var(--color-grey-light);
+}
+
+h3, h4, h5, h6 {
+    margin: var(--margin-indented-2);
+}
+
+h4, h5, h6 {
+    margin: var(--margin-indented-3);
+}
+
+html {
+    color: var(--color-grey-dark);
+    font-family: var(--font-primary);
+    font-size: var(--size-four);
     --font-primary: 'Muli', 'Time New Roman', sans-serif;
     --font-secondary: 'Share', cursive, arial;
 }
@@ -119,17 +135,12 @@ nav ul {
 }
 
 figure {
-    display: inline;
+    display: block;
 }
 
 .logo {
     font-size: var(--size-eight);
     font-family: var(--font-secondary);
-}
-
-.secondary-font {
-    font-family: var(--font-secondary);
-    margin-top: 2rem;
 }
 
 a {
@@ -151,6 +162,59 @@ a:focus {
 
 a:active {
     color: var(--color-grey-medium);
+}
+
+.featured-text-primary {
+    background-color: var(--color-pink-light);
+    border-radius: .5rem;
+    color: var(--color-brown);
+    padding: 1rem;
+    box-shadow: 1rem 1rem 2rem var(--color-pink);
+}
+
+.featured-text-secondary {
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem .8rem var(--color-grey-light);
+    color: var(--color-pink);
+    padding: 1rem;
+}
+
+.tertiary-text {
+    font-size: var(--size-one);
+    font-style: italic;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.heading-one {
+    font-family: var(--font-secondary);
+    font-size: var(--size-eight);
+    font-weight: bold;
+}
+
+.color-swatch svg {
+    border-radius: 10rem;
+}
+
+blockquote {
+    border-left: 3px solid var(--color-brown-light);
+    padding-left: 2rem;
+}
+cite {
+    color: var(--color-brown-light);
+}
+/*=================================
+EXAMPLES
+===================================*/
+.secondary-font {
+    font-family: var(--font-secondary);
+    margin-top: 2rem;
 }
 
 .link-visited {
@@ -179,44 +243,11 @@ a:active {
     text-decoration: underline;
 }
 
-.heading-display {
+.figure-border {
     border: 1px solid var(--color-grey-light);
     padding: .5rem 1rem;
 }
 
-.featured-text-one {
-    background-color: var(--color-pink-light);
-    border-radius: .5rem;
-    color: var(--color-brown);
-    padding: 1rem;
-    box-shadow: 1rem 1rem 2rem var(--color-pink);
-}
-
-.featured-text-two {
-    border-radius: .5rem;
-    box-shadow: .5rem .5rem .8rem var(--color-grey-light);
-    color: var(--color-pink);
-    padding: 1rem;
-}
-
-.tertiary-text {
-    font-size: var(--size-one);
-    font-style: italic;
-}
-
-.list-ordered {
-    list-style-type: lower-roman;
-}
-
-.list-unordered {
-    list-style-type: circle;
-}
-
-.heading-one {
-    font-family: var(--font-secondary);
-    font-size: var(--size-eight);
-    font-weight: bold;
-}
 
 /*=================================
 LINK BUTTON
@@ -229,7 +260,6 @@ LINK BUTTON
     color: var(--color-brown);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-left: 1rem;
     margin-top: 1.5rem;
 
 }
@@ -256,7 +286,6 @@ LINK BUTTON
     color: var(--color-pink);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-left: 1rem;
     margin-top: 1.5rem;
 
 }
@@ -279,7 +308,6 @@ LINK BUTTON
     color: var(--color-grey-medium);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-left: 1rem;
     margin-top: 1.5rem;
 
 }
@@ -296,6 +324,10 @@ LINK BUTTON
     border: 3px solid var(--color-grey-medium);
     font-weight: bold;
 }
+
+figcaption {
+    margin-top: .5rem;
+}
 /*=================================
 ACCORDION
 ===================================*/
@@ -303,20 +335,70 @@ details {
 
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    background: var(--color-pink-light);
     border-radius: 8px;
-    padding: 1rem;
     margin-bottom: 1.5rem;
     width: 75%;
 }
-
+details p {
+    border: 2px solid var(--color-pink-light);
+    padding: 1rem;
+    margin: 0;
+}
 summary {
+    background-color: var(--color-pink);
     list-style-image: url(images/right-arrow.svg);
+    padding: 1rem;
+    outline: none;
 }
 
 summary::-webkit-details-marker {
     background: url(images/right-arrow.svg);
     color: transparent;
+}
+
+/*=================================
+DIALOG COMPONENT
+===================================*/
+
+dialog {
+    animation:unfoldIn .75s;
+    background-color: #F8F5F0;
+    border: 1px solid var(--color-pink-light);
+    box-shadow: .25rem .25rem 1rem rgba( 0,0,0, .4);
+    border-radius: .5rem;
+    max-width: 30%;
+    margin-top:0;
+}
+
+@keyframes unfoldIn {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-5rem) scale(.3);
+    }
+
+    60% {
+        transform: translateY(1.5rem) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+dialog::backdrop {
+    animation: opacity-to-half 1.5s;
+    background-color: rgb(158, 158, 154);
+    opacity: .3;
+}
+
+
+.heading-modal {
+    font-size: var(--size-six);
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    text-align: center;
 }
 
 /*=================================
