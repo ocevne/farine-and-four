@@ -401,6 +401,47 @@ dialog::backdrop {
     text-align: center;
 }
 
+label, input, select, textarea {
+    display: block;
+}
+[type="text"], [type="email"], [type="password"], textarea, select {
+    border: 1px solid var(--color-grey-light);
+    padding: .75rem;
+    max-width: 20rem;
+    width: 100%;
+}
+
+textarea {
+    min-height: 6rem;
+}
+.error-text {
+    color: red;
+    font-size: .75rem;
+    margin-top: 0;
+}
+.error-input {
+    border: 1px solid red;
+}
+#disabled, #disabled-message {
+    background-color: lightgray;
+
+}
+[type="submit"], button {
+    background-color: var(--color-pink);
+    border-radius: 1.5rem;
+    color: var(--color-brown);
+    border: none;
+    padding: 1rem 2rem;
+}
+
+[type="submit"]:hover, [type="submit"]:focus, button:hover, button:focus {
+    background-color: var(--color-pink-light);
+    outline: none;
+}
+
+[type="submit"]:active, button:active  {
+    background-color: var(--color-grey-light);
+}
 /*=================================
 HEADER COMPONENTS
 ===================================*/

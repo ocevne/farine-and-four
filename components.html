@@ -92,6 +92,65 @@
         </dialog>
 
         </figure>
+        <h2>Form Inputs</h2>
+            <h3>Text</h3>
+                <figure>
+                    <label for="text">Standard</label>
+                    <input type="text" id="text" name="text" placeholder="Example Placeholder">
+                </figure>
+                <figure>
+                    <label for="text">Error</label>
+                    <input type="text" id="text" name="text" placeholder="Example Placeholder" class="error-input">
+                    <p class="error-text">Something went wrong, try again.</p>
+                </figure>
+                <figure>
+                    <label for="disabled">Disabled</label>
+                    <input type="text" id="disabled" name="text" disabled value="Disabled Placeholder">
+                </figure>
+            <h3>Textarea</h3>
+                <figure>
+                    <label for="user-message">Standard Texarea</label>
+                    <textarea id="user-message" name="message" placeholder="Enter your message here"></textarea>
+                </figure>
+                <figure>
+                    <label for="user-message">Error Texarea</label>
+                    <textarea id="user-message" name="message" placeholder="Enter your message here" class="error-input"></textarea>
+                    <p class="error-text">Something went wrong, try again.</p>
+                </figure>
+                <figure>
+                    <label for="disabled-message">Disabled Textarea</label>
+                    <textarea id="disabled-message" name="message" placeholder="Enter your message here" disabled ></textarea>
+                </figure>
+            <h3>Select</h3>
+                <figure>
+                    <label for="user-selection">Standard Select</label>
+                    <select id="user-selection" name="selection">
+                        <option disabled selected hidden>Please Select</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </figure>
+                <figure>
+                    <label for="user-selection">Error Select</label>
+                    <select id="user-selection" name="selection" class="error-input">
+                        <option disabled selected hidden>Please Select</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                    <p class="error-text">Something went wrong, try again.</p>
+                </figure>
+                <figure>
+                    <label for="disabled-user-selection">Disabled Select</label>
+                    <select id="disabled-user-selection" name="selection" disabled >
+                        <option value="" disabled selected hidden>Selection Disabled</option>
+                    </select>
+                </figure>
+        <h3>Submit Button</h3>
+            <figure>
+                <button>Submit</button>
+            </figure>
 
     </main>
     <footer>
@@ -124,7 +183,7 @@
             });
 
         });
-    </script
+    </script>
 
 </body>
 </html>
