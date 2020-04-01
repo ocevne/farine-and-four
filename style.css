@@ -64,8 +64,8 @@ html {
     --margin-standard: auto;
     --margin-special: 5rem 1rem 2.5rem;
     --margin-indented-1: 4rem 2rem;
-    --margin-indented-2: 3rem 3rem;
-    --margin-indented-3: 3rem 4rem;
+    --margin-indented-2: 3rem 2rem 1.75rem 3rem;
+    --margin-indented-3: 3rem 2rem 1.75rem 4rem;
 }
 
 h1 {
@@ -124,12 +124,12 @@ a {
     text-decoration: none;
 }
 
-footer a:visited, header a:visited {
-    color: var(--color-brown-light)
+footer a:visited {
+    color: var(--color-brown-light);
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--color-pink-light);
 }
 
 a:focus {
@@ -201,8 +201,7 @@ EXAMPLES
 }
 
 .link-hover {
-    color: var(--color-brown);
-    text-decoration: underline;
+    color: var(--color-pink-light);
 
 }
 
@@ -256,7 +255,6 @@ LINK BUTTON
     color: var(--color-brown);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 1.5rem;
 
 }
 
@@ -281,7 +279,6 @@ LINK BUTTON
     color: var(--color-pink);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 1.5rem;
 
 }
 .link-button-secondary:hover {
@@ -303,7 +300,6 @@ LINK BUTTON
     color: var(--color-grey-medium);
     display: inline-block;
     padding: 1rem 2rem;
-    margin-top: 1.5rem;
     text-decoration: none;
 
 }
@@ -570,14 +566,16 @@ MQ
 }
 
 .search-input {
-    border: 1.5px solid var(--color-pink);
-    border-radius: .75rem;
+    border: 1.5px solid var(--color-pink-light);
+    border-radius: .5rem;
     background-image: url("images/search-icon.png");
     background-repeat: no-repeat;
     background-position: right;
+    background-position-x: 315px;
     background-size: 20px;
+    outline: none;
 }
-/*hover state for nav couldn't make it work, image is cut off
+/*hover state for nav couldn't make it work, image is cut off, line height doesnt fix it
 .current-page {
     background-image: url(images/cupcake.svg);
     background-repeat: no-repeat;
@@ -588,7 +586,7 @@ MQ
 }
  */
 
-.current-page {
-    color: #F8F5F0 !important;
+li a.current-page {
+    color: #F8F5F0;
 }
 
