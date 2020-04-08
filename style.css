@@ -147,6 +147,7 @@ a:active {
     color: var(--color-brown);
     padding: 1rem;
     box-shadow: 1rem 1rem 2rem var(--color-pink);
+    max-width: 30rem;
 }
 
 .featured-text-secondary {
@@ -154,6 +155,7 @@ a:active {
     box-shadow: .5rem .5rem .8rem var(--color-grey-light);
     color: var(--color-pink);
     padding: 1rem;
+    max-width: 30rem;
 }
 
 .tertiary-text {
@@ -343,16 +345,19 @@ summary {
 
 summary::-webkit-details-marker {
     background: url(images/right-arrow.svg);
+    background-position: right;
     color: transparent;
 }
 
 select {
     background-image: url(images/scroll.svg);
     background-repeat: no-repeat;
-    background-position: right;
     background-size: 25px;
 }
 
+summary:focus {
+    border: 1.5px solid var(--color-pink-light);
+}
 
 /*=================================
 DIALOG COMPONENT
@@ -398,7 +403,11 @@ dialog h1 {
     text-align: center;
 }
 
-summary:focus, textarea:focus, input:focus, select:focus {
+/*=================================
+FORM INPUT
+===================================*/
+
+textarea:focus, input:focus, select:focus {
     border: 1.5px solid var(--color-brown-light);
 }
 
@@ -563,7 +572,27 @@ MQ
 
 
     }
+
+    .current-page {
+        position: relative;
+    }
+
+    .current-page:before {
+        content: '';
+        background-image: url(images/cupcake.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        height: 1.3rem;
+        position: absolute;
+        top: -1.25rem;
+        width: 1.25rem;
+    }
+
 }
+
+/*=================================
+SEARCH 
+===================================*/
 
 .search-input {
     border: 1.5px solid var(--color-pink-light);
@@ -575,18 +604,67 @@ MQ
     background-size: 20px;
     outline: none;
 }
-/*hover state for nav couldn't make it work, image is cut off, line height doesnt fix it
-.current-page {
-    background-image: url(images/cupcake.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 20px;
-    background-position-y: -15px;
 
-}
- */
 
 li a.current-page {
     color: #F8F5F0;
 }
 
+.error-notification {
+    background-color: #d96262;
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.warning-notification {
+    background-color: #f5c99a;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.success-notification {
+    background-color: #D8EACC;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.neutral-notification {
+    background-color: #C4DBF2;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+.hero-block {
+    background-image: url("images/hero-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 70vh;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-block h1 {
+    color: whitesmoke;
+    text-transform: uppercase;
+
+}
+
+.hero-block .featured-text-primary {
+    box-shadow: none;
+    text-align: center;
+}
+
+.hero-block .link-button-primary {
+
+}
