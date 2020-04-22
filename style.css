@@ -750,17 +750,148 @@ CARDS
 }
 
 .action-card {
-    background-image: url("images/action-card-bg.jpg");
+    background-image: url("images/donuts.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    padding: 5rem 2rem;
-    color: whitesmoke;
+    max-width: 15rem;
+    padding: 3rem 2rem;
+    color: var(--color-brown);
     border-radius: 2rem;
 }
 
-.action-card .link-button-primary {
-    position: relative;
-    left: 8rem;
+
+.action-card p {
+    background-color: rgba(255,192,203,.5);
+    border-radius: 2rem;
+    padding: 1rem;
+
+}
+
+.card-grid .article-card {
+    margin: auto;
+
+}
+.article-card img {
+    max-width: 100%;
+}
+
+/*=================================
+CARDS GRID
+===================================*/
+
+@media (min-width: 300px) {
+
+    .card-grid {
+        display: grid;
+        grid-row-gap: 1rem;
+
+    }
+}
+
+@media (min-width: 600px) {
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+
+    }
+
+    .article-card {
+        max-width: 400px;
+    }
+
+    .featured-card a {
+        display: flex;
+        align-items: center;
+    }
+
+    .featured-card {
+        grid-column: span 2;
+        max-width: none;
+    }
+
+    .featured-card img {
+        max-width: 50%;
+        max-height: 100%;
+        margin-right: 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .featured-card {
+        grid-column: span 2;
+
+    }
+
+    .featured-card a {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .featured-card img {
+    max-width: 100%
+
+    }
+
+    .card-grid .article-card {
+        margin: 1rem;
+    }
+}
+
+.card-grid {
+
+margin: auto;
+max-width: 1000px;
+
+}
+
+/*=================================
+CALLOUT GRID
+===================================*/
+
+.callout-grid {
+margin: auto;
+max-width: 1000px;
+display: grid;
+grid-row-gap: 1rem;
+
+}
+
+.callout-grid .action-card {
+    margin: auto;
+}
+
+@media (min-width: 600px) {
+
+    .callout-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+        max-width: 35rem;
+    }
+
+
+    .callout-grid .action-card:first-child {
+        grid-column: 2 span;
+        max-width: 35rem;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .callout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 60rem;
+    }
+
+    .callout-grid .action-card:first-child {
+        grid-column: 1;
+    }
 }
