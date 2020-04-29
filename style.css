@@ -17,7 +17,7 @@ html {
 LAYOUT
 ===================================*/
 body {
-    margin: var(--margin-standard);
+    margin: 1rem;
 }
 .look-feel-section {
     padding: 0;
@@ -58,30 +58,6 @@ html {
     --size-one: .933rem;
     --size-zero: .5rem;
 
-}
-
-html {
-    --margin-standard: auto;
-    --margin-special: 5rem 1rem 2.5rem;
-    --margin-indented-1: 4rem 2rem;
-    --margin-indented-2: 3rem 2rem 1.75rem 3rem;
-    --margin-indented-3: 3rem 2rem 1.75rem 4rem;
-}
-
-h1 {
-    margin: var(--margin-special);
-}
-h2 {
-    margin: var(--margin-indented-1);
-    border-bottom: 1px solid var(--color-grey-light);
-}
-
-h3, h4, h5, h6 {
-    margin: var(--margin-indented-2);
-}
-
-h4, h5, h6 {
-    margin: var(--margin-indented-3);
 }
 
 html {
@@ -700,6 +676,7 @@ CARDS
 
 .article-card {
     border: 2px solid var(--color-pink);
+    border-radius: 1rem;
     padding: 1rem;
     position: relative;
     max-width: 310px;
